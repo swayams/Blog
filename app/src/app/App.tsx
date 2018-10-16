@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Brand from '../components/Logo/Brand';
 import Navigation from '../components/Navigation/Nav';
 import Config from '../config/configuration'
 import './App.scss';
@@ -11,6 +12,7 @@ class App extends React.Component {
   public constructor() {
     super({}, {})
     this.config = new Config()
+    console.log(this.config.brand.name)
   }
 
 
@@ -18,6 +20,8 @@ class App extends React.Component {
     return (
       <div className="App">
         <header className="App-header">
+
+          <Brand name={this.config.brand.name} img={this.config.brand.image}/>
       
           <Navigation links={this.config.links}/>
         </header>
