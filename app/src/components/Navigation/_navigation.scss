@@ -1,0 +1,26 @@
+.nav {
+    flex: 2;
+    display: inline-flex;
+
+    .node {
+        flex-wrap: wrap;
+        width: 25%;
+        list-style-type: none;
+        text-align: center;
+        height: 100%;
+
+      
+
+        .link {
+            width: 100%;
+            display: block;
+            line-height: 3em;
+            text-decoration: none;
+            &:hover {
+                background-color: $header-secondary-color;
+                color: #fff !important;
+            }
+                        
+        }
+    }
+}

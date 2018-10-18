@@ -1,21 +1,15 @@
-.App {
-  text-align: center;
+@import '../config/styles/_main.scss';
 
+header {
 
-  &-header {
-    background-color: #222;
-    height: 5em;
-    padding: 20px;
-    color: white;
-  }
+  @extend %container;  
+  line-height: 3em;
+  color: $header-primary-color;
+  font-family: 'Mukta', sans-serif;
+  
+  border: 1px solid $header-secondary-color;
 
-  &-title {
-    font-size: 1.5em;
-  }
-
-  &-intro {
-    font-size: large;
-  }
 }
 
 
+@import '../components/_components.scss';

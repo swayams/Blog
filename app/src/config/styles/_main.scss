@@ -1,0 +1,26 @@
+@import './_variables.scss';
+
+//font
+
+@import url('https://fonts.googleapis.com/css?family=Maven+Pro|Mukta:500');
+
+//reset
+body, h1, h2, h3, h4, h5, h6, p, i, b, div, span, ul, li {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    font-style: normal;
+   
+    font-family: 'Maven Pro', sans-serif;
+}
+
+%container {
+    
+    margin: 0 auto;
+    max-width: 960px;
+    display: flex;
+    text-align: center;
+
+}
+

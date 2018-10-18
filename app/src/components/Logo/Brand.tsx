@@ -11,7 +11,7 @@ export interface IBrandProps {
 const classes = {
     logo: 'logo',
     name: 'name',    
-    root: 'root'
+    root: 'brand'
 }
  
 class Brand extends React.Component<IBrandProps> {
@@ -21,8 +21,7 @@ class Brand extends React.Component<IBrandProps> {
     }
     public render() { 
         return ( 
-            <div>
-                <img src={this.props.img} className={classes.logo} />
+            <div className={classes.root}>
                 <h1 className={classes.name}>{this.props.name}</h1>
             </div>
          );

@@ -7,7 +7,13 @@ export interface INavigationProps {
 export interface INavigationState {
     selected: string
 }
- 
+
+const classes = {
+    link: "link",
+    nav : "nav",
+    node: "node"
+}
+
 class Navigation extends React.Component<INavigationProps, INavigationState> {
     constructor(props: INavigationProps) {
         super(props);
@@ -15,10 +21,16 @@ class Navigation extends React.Component<INavigationProps, INavigationState> {
     }
     public render() { 
         return ( 
-           this.props.links.map(
+            <ul className={classes.nav}>
+            { 
+              this.props.links.map(
               (link) => {
-                  return <li key={link}> <a href={"#"+link}>{link}</a>  </li>
+                  return <li key={link} className={classes.node}> 
+                            <a className={classes.link} href={"#"+link}>{link}</a>  
+                         </li>
               })
+            }
+            </ul>
          );
     }
 }

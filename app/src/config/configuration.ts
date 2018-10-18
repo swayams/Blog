@@ -3,8 +3,7 @@ class Configuration {
     public brand :  any
     public constructor (){
         this.links = ["About", "Portfolio", "Blog", "Contact Me"]
-        this.brand = {
-            image : '',
+        this.brand = {            
             name: "Swayam Siddha"           
         }
     }
