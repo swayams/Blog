@@ -9,8 +9,8 @@ import Navigation from './Navigation/Nav';
 class Header extends React.Component{
     private config: any
 
-    constructor() {
-        super({}, {})
+    constructor( props: {}) {
+        super(props)
         this.config =new Config();
     }
      

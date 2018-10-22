@@ -1,3 +1,9 @@
 .about {
-    @extend %container;
+
+    @extend %widthMax;
+    img {
+        float: left;
+        margin-right: 1em;
+        margin-bottom: 1em;
+    }
 }

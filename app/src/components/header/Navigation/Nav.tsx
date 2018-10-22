@@ -26,7 +26,7 @@ class Navigation extends React.Component<INavigationProps, INavigationState> {
               this.props.links.map(
               (link) => {
                   return <li key={link} className={classes.node}> 
-                            <a className={classes.link} href={"#"+link}>{link}</a>  
+                            <a className={classes.link} href={link}>{link}</a>  
                          </li>
               })
             }
