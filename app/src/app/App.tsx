@@ -1,29 +1,34 @@
 import * as React from 'react';
-import Brand from '../components/Logo/Brand';
-import Navigation from '../components/Navigation/Nav';
-import Config from '../config/configuration'
+
+
+import Header from '../components/header/header';
+
 import './App.scss';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Blog from '../components/pages/blog/blog';
+import Contacts from '../components/pages/contact/contact';
+import Portfolio from './../components/pages/portfolio/portfolio';
+import About from '../components/pages/about/AboutMe';
 
 
 
 class App extends React.Component {
-  private config: any;
-
-  public constructor() {
-    super({}, {})
-    this.config = new Config()
-    
-  }
-
 
   public render() {
     return (
       <div>
-        <header>
-          <Brand name={this.config.brand.name} img={this.config.brand.image}/>      
-          <Navigation links={this.config.links}/>
-        </header>
-        
+        <Header/>
+
+        <BrowserRouter>
+          <Switch>
+            <Route path="/About" component = {About} exact = {true} />
+            <Route path="/Blog" component = {Blog} />
+            <Route path="/Contact" component = {Contacts} />
+            <Route path="/Portfolio" component = {Portfolio} />
+          </Switch>
+        </BrowserRouter>
+    
       </div>
     );
   }
