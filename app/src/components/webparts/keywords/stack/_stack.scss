@@ -1,0 +1,42 @@
+
+.stacks {
+    margin: 1em 0;
+    grid-column: 1/3;
+
+    .stack {
+        width: 100%;
+        display: inline-grid;
+        grid-template-columns: 40% 60%;
+        height: 2em;
+        line-height: 2em;
+        
+        color: $header-secondary-color;
+        margin: 0.2em 0;
+
+        .name {
+           
+            float: left;
+            text-align: left;
+            display: inline-block;
+            
+            color: $header-secondary-color;
+            padding-left: 1em;
+        }
+        .rating {
+            
+            display: inline-grid;
+            grid-template-columns: repeat(5, 1fr);
+            div {
+                
+                background: $header-ternary-color;
+                
+                width: auto;
+               
+                margin: 0.5em;
+
+            }
+        }
+    }
+    
+
+}

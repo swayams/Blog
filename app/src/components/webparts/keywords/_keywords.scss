@@ -1,0 +1,29 @@
+.keywords {
+    display: inline-grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 100%;
+    min-height: 8em;
+    margin: 1em 0;
+
+    h1 {
+        @extend %header; 
+        width: 100%;
+        grid-column: 1/4;
+    }
+
+    .keyword {
+        text-decoration: none;
+        text-transform: capitalize;
+        text-align: center;
+        padding: 0 1em;
+        display: inline-block;
+        font-size: 1em;
+        color: #fff;
+        background-color: $header-secondary-color;
+        height: 2em;
+        line-height: 2em;
+        margin: 3px;        
+    }
+}
+
+@import './stack/_stack.scss';

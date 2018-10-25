@@ -27,4 +27,15 @@ body, h1, h2, h3, h4, h5, h6, p, i, b, div, span, ul, li {
 
 }
 
+%header {
+    font-size: 1em;
+    color: $header-primary-color;
+    display: inline-block;
+    height: 3em;
+    line-height: 3em;
+    border: $header-primary-color;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
 

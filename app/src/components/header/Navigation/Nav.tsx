@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link  } from 'react-router-dom';
 
 export interface INavigationProps {
     links: string []
@@ -21,16 +22,16 @@ class Navigation extends React.Component<INavigationProps, INavigationState> {
     }
     public render() { 
         return ( 
-            <ul className={classes.nav}>
+            <div className={classes.nav}>
             { 
               this.props.links.map(
               (link) => {
                   return <li key={link} className={classes.node}> 
-                            <a className={classes.link} href={link}>{link}</a>  
+                            <Link className={classes.link} to={link}>{link}</Link>  
                          </li>
               })
             }
-            </ul>
+            </div>
          );
     }
 }
