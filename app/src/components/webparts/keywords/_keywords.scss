@@ -23,6 +23,12 @@
         height: 2em;
         line-height: 2em;
         margin: 3px;        
+
+        &:hover {
+            border: 1px solid $header-secondary-color;
+            color: $header-secondary-color;
+            background: #fff;
+        }
     }
 }
 
