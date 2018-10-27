@@ -3,6 +3,9 @@ import face from '../../../config/assets/brand-img.jpg';
 import Config from '../../../config/configuration';
 import TextBlock from '../../content/textBlock';
 import Image from '../../thumbnail/image';
+import Keywords from '../../webparts/keywords/keywords';
+import Experience from './../../webparts/experience/experience';
+
  
 
  
@@ -24,6 +27,10 @@ class About extends React.Component {
                    altText={this.config.page.about.image.alt} />
                            
                  <TextBlock content={this.config.page.about.content} />
+
+                 <Experience experiences={this.config.page.about.experience} />
+
+                 <Keywords keywords = {this.config.page.about.keyword} />
             </div>
          );
     }

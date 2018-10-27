@@ -7,6 +7,10 @@ export interface IPortfolioProps {
 export interface IPortfolioState {
     test: string;
 }
+
+const classes = {
+    root: 'portfolio'
+}
  
 class Portfolio extends React.Component<IPortfolioProps, IPortfolioState> {
     constructor(props: IPortfolioProps) {
@@ -15,7 +19,7 @@ class Portfolio extends React.Component<IPortfolioProps, IPortfolioState> {
     }
     public render() { 
         return ( 
-            <div>
+            <div className={classes.root}>
                 Test Portfolio
                 
             </div>

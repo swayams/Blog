@@ -1,0 +1,33 @@
+.experiences {
+    width: 100%;
+    display: inline-grid;
+    h1 {
+       @extend %header
+    }
+    
+
+    .experience {
+       
+        margin: 10px 0;
+      
+        i {
+            font-size: 0.8em;
+    
+            &.years {
+                width: 100%;
+                color: $header-ternary-color;
+                font-style: italic;
+                clear:both;
+            }
+        
+            &.position {
+                &:before {
+                    content: ' | ';
+                }
+                
+                color: $header-secondary-color;
+                text-transform: uppercase;
+            }
+        }
+    }
+}
