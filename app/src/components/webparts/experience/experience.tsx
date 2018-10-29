@@ -23,7 +23,7 @@ class Experience extends React.Component<IExperienceProps, IExperienceState> {
     }
     public render() { 
         return ( 
-            <div className={classes.root}>
+            <div className={classes.root} >
                 <h1>Experience</h1>
                 {
                     this.props.experiences.map( exp => 

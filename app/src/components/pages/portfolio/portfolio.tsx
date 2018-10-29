@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface IPortfolioProps {
-    projects: string[]
+    projects: string
 }
  
 export interface IPortfolioState {
