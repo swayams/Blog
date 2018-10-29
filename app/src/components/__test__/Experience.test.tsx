@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import Experience from './experience';
+import Experience from '../Experience';
 
 it('renders without crashing', () => {
   const exp = [{id:1}, {id:2}]

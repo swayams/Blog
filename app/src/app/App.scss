@@ -1,2 +1,23 @@
 @import '../config/styles/_main.scss';
-@import '../components/_components.scss';
+
+//components
+
+@import '../components/__scss__/_Brand.scss';
+@import '../components/__scss__/_Experience.scss';
+@import '../components/__scss__/_Image.scss';
+@import '../components/__scss__/_Navigation.scss';
+@import '../components/__scss__/_Stack.scss';
+@import '../components/__scss__/_TextBlock.scss';
+
+//container 
+
+@import '../containers/__scss__/_Header.scss';
+@import '../containers/__scss__/_Keywords.scss';
+
+//Pages
+@import '../pages/__scss__/_About.scss';
+@import '../pages/__scss__/_Blog.scss';
+@import '../pages/__scss__/_Contact.scss';
+@import '../pages/__scss__/_Portfolio.scss';
+
+

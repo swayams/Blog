@@ -1,7 +1,7 @@
 import * as React from 'react';
-import Config from '../../config/configuration';
-import Brand from './Logo/Brand';
-import Navigation from './Navigation/Nav';
+import Brand from '../components/Brand';
+import Navigation from '../components/Navigation';
+import Config from '../config/configuration';
 
 
 

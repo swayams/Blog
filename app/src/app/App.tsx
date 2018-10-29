@@ -1,15 +1,15 @@
 import * as React from 'react';
 
 
-import Header from '../components/header/header';
+import Header from '../containers/Header';
 
 import './App.scss';
 
 import {BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import About from '../components/pages/about/AboutMe';
-import Blog from '../components/pages/blog/blog';
-import Contacts from '../components/pages/contact/contact';
-import Portfolio from './../components/pages/portfolio/portfolio';
+import About from '../pages/AboutMe';
+import Blog from '../pages/Blog';
+import Contacts from '../pages/Contact';
+import Portfolio from '../pages/Portfolio';
 
 
 

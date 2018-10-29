@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route  } from 'react-router-dom';
-import Stack from './stack/stack';
+import Stack from '../components/Stack';
 
 export interface IKeywordsProps {
     keywords: any[]

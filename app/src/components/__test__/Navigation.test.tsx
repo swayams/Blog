@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Navigation from './Nav';
+import Navigation from '../Navigation';
 
 
 const Links = ["test1", "test2", "test3" ]

@@ -1,10 +1,10 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Contacts from './contact';
+import {BrowserRouter as Router } from 'react-router-dom';;
+import Header from '../Header';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<Contacts value=''/>, div);
+  ReactDOM.render(<Router><Header /></Router>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
- 

@@ -1,13 +1,10 @@
 import * as React from 'react';
-import face from '../../../config/assets/brand-img.jpg';
-import Config from '../../../config/configuration';
-import TextBlock from '../../content/textBlock';
-import Image from '../../thumbnail/image';
-import Keywords from '../../webparts/keywords/keywords';
-import Experience from './../../webparts/experience/experience';
-
- 
-
+import Experience from '../components/Experience';
+import Image from '../components/Image';
+import TextBlock from '../components/TextBlock';
+import face from '../config/assets/brand-img.jpg';
+import Config from '../config/configuration';
+import Keywords from '../containers/Keywords';
  
 const classes = {
     root: 'about'

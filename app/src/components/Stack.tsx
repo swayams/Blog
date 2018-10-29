@@ -1,5 +1,5 @@
 import * as React from 'react';
-import Config from '../../../../config/configuration';
+import Config from '../config/configuration';
 
 export interface IStackProps {
     match : any
