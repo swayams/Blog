@@ -1,0 +1,14 @@
+header {
+
+    @extend %container;  
+    
+    line-height: 3em;
+    color: $header-primary-color;
+    font-family: 'Mukta', sans-serif;  
+    border: 1px solid $header-secondary-color;
+  
+  }
+
+  
+
+  
