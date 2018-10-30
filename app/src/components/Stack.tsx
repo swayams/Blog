@@ -2,7 +2,7 @@ import * as React from 'react';
 import Config from '../config/configuration';
 
 export interface IStackProps {
-    match : any
+    match? : any
 }
  
 export interface IStackState {
@@ -20,13 +20,19 @@ const classes = {
 }
 
 class Stack extends React.Component<IStackProps, IStackState> {
+    
     public config: Config;
     public id: string;
     public stackObj : any;
 
+   
+
     constructor(props: IStackProps) {
         super(props);
-        this.state = { id: this.props.match.params.id  };
+        if (this.props.match !== null) { 
+            this.state = { id: this.props.match.params.id  };
+           
+        }
         this.config = new Config();
     }
 
@@ -56,11 +62,10 @@ class Stack extends React.Component<IStackProps, IStackState> {
             </div>  
         );
     }
-
     private createRatings = (count: number) => {
         const table = []
         for( let i = 0; i < count; i ++) {
-            table.push(<div />)
+            table.push(<div key={i}/>)
         }
 
         return table;

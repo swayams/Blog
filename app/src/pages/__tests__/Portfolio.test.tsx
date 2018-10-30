@@ -7,4 +7,3 @@ it('renders without crashing', () => {
   ReactDOM.render(<Portfolio projects='' />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
- 

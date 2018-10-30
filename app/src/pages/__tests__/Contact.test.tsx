@@ -7,4 +7,3 @@ it('renders without crashing', () => {
   ReactDOM.render(<Contacts value=''/>, div);
   ReactDOM.unmountComponentAtNode(div);
 });
- 
