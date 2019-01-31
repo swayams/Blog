@@ -1,11 +1,17 @@
+import { ILink } from "../components/Navigation";
 
 
 class Configuration {
-    public links : string[]
+    public links : ILink[]
     public brand :  any
     public page : any
     public constructor (){
-        this.links = ["About", "Portfolio", "Blog", "Contact"]
+        this.links = [
+            {href: '/', name: "About"},
+            {href: '/portfolio', name: "Portfolio"},
+            {href: '/contact', name: "Contact"},
+            {href: '/blog', name: "Blog"},
+        ]
         this.brand = {            
             name: "Swayam Siddha"           
         }
@@ -13,7 +19,7 @@ class Configuration {
         
         this.page = {
             about: {
-                id: this.links[1],
+                id: this.links[0].name,
                 image: {
                     alt: 'my ugly face',                    
                     height: '200',
@@ -22,7 +28,7 @@ class Configuration {
 
                 content: `
                     Hi, Welcome to my page. I am a frontend engineer with expertise in enterprise front-end lifecycle management. I have extensive experience
-                    working with frontend of Microsoft collaboration stack and allied products such as K2 BlackPearl. I have very good hands-on with HTML and CSS, 
+                    working with frontend of Microsoft collaboration stack and allied products such as K2 BlackPearl. I have  hands-on with HTML and CSS, 
                     well versed with the modern paradigms such as data driven design, functional styling, Component driven frameworks.   
                     
                 `,
@@ -74,7 +80,7 @@ class Configuration {
                         
                         company: 'Tieto Ltd.',
                         id: '1',
-                        role: 'Worked in E-Commerce domain, with content management and collaboration platforms, responsible for front-end mantainance, enhancements and new implementations.',
+                        role: 'Implement new enhancements, improve, maintain and upgrade front-end infrastructure of enterprise publishing system of a large European e-commerce company. HTML 5 form engine using react, material ui and rest api',
                         start: '2017',
                         title: 'Software Developer I',
                        
@@ -83,27 +89,30 @@ class Configuration {
                         company: 'Cybage Ltd.',
                         end: '2017',
                         id: '2',
-                        role: 'Worked in E-Commerce domain, with content management and collaboration platforms, responsible for front-end mantainance, enhancements and new implementations.',
+                        role: 'UI developer and admin for an enterprise workﬂow tool. Responsible for enhancing, extending and managing system for better usability and intuitiveness',
                         start: '2016',
-                        title: 'Software Developer I',
+                        title: 'Software Engineer',
                        
                     },
                     {
                         company: 'Bitwise Ltd.',
                         end: '2016',
                         id: '3',
-                        role: 'Worked in E-Commerce domain, with content management and collaboration platforms, responsible for front-end mantainance, enhancements and new implementations.',
+                        role: 'Mantained and enhanced SharePoint based collaboration and content management portal',
+                        start: '2015',
+                        title: 'Software Programmer',
+                       
+                    },
+                    {
+                        company: 'Paragyte Ltd.',
+                        end: '2015',
+                        id: '3',
+                        role: 'SharePoint consulting. Helped orgainzation adopt and leverage sharepoint to the maximum possible extend, migrations.',
                         start: '2014',
-                        title: 'Software Developer I',
+                        title: 'SharePoint Consultant',
                        
                     }
                 ]
-
-                
-
-                
-
-
             }
         }
     }

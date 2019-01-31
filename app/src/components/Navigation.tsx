@@ -2,7 +2,7 @@ import * as React from 'react';
 import { Link  } from 'react-router-dom';
 
 export interface INavigationProps {
-    links: string []
+    links: ILink []
 }
  
 export interface INavigationState {
@@ -25,9 +25,9 @@ class Navigation extends React.Component<INavigationProps, INavigationState> {
             <div className={classes.nav}>
             { 
               this.props.links.map(
-              (link) => {
-                  return <li key={link} className={classes.node}> 
-                            <Link className={classes.link} to={link}>{link}</Link>  
+              (link, index) => {
+                  return <li key={index} className={classes.node}> 
+                            <Link className={classes.link} to={link.href}>{link.name}</Link>  
                          </li>
               })
             }
@@ -37,3 +37,9 @@ class Navigation extends React.Component<INavigationProps, INavigationState> {
 }
  
 export default Navigation;
+
+
+export interface ILink {
+    href: string,
+    name: string
+}

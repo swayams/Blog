@@ -26,10 +26,10 @@ class Experience extends React.Component<IExperienceProps, IExperienceState> {
             <div className={classes.root} >
                 <h1>Experience</h1>
                 {
-                    this.props.experiences.map( exp => 
+                    this.props.experiences.map( (exp, index) => 
                         {
                            return (
-                             <div key={exp.id} className={classes.item}>
+                             <div key={index} className={classes.item}>
                                     <h2 >{exp.company}</h2>
                                     <i className={classes.years}>{exp.start} {' - '}{ exp.end ? exp.end : 'till date'} </i>
                                     <i className={classes.position}> {exp.title}</i>
