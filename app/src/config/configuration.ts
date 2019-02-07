@@ -1,5 +1,7 @@
 import { ILink } from "../components/Navigation";
 
+import { AppPages } from './constants';
+
 
 class Configuration {
     public links : ILink[]
@@ -7,10 +9,10 @@ class Configuration {
     public page : any
     public constructor (){
         this.links = [
-            {href: '/', name: "About"},
-            {href: '/portfolio', name: "Portfolio"},
-            {href: '/contact', name: "Contact"},
-            {href: '/blog', name: "Blog"},
+            {href: '/', name: AppPages.ABOUT},
+            {href: '/portfolio', name: AppPages.PORTFOLIO},
+            {href: '/contact', name: AppPages.CONTACTS},
+            {href: '/blog', name: AppPages.BLOG},
         ]
         this.brand = {            
             name: "Swayam Siddha"           
@@ -47,31 +49,39 @@ class Configuration {
                 ],
 
                 keyword : {
-                    JavaScript: {                                              
-                        Angular: 3,
-                        AngularJS: 3,
-                        EcmaScript: 4,
-                        React: 4,                        
-                        Typescript: 4,
-                        Vue: 2,
-                        default: 4
+                    JavaScript: {
+                        rating: 3,
+                        topics: {                                              
+                            Angular: 3,
+                            AngularJS: 3,
+                            EcmaScript: 4,
+                            React: 4,                        
+                            Typescript: 4,
+                            Vue: 2
+                        }
+
                     },
 
                     CSS: {
+                       rating: 4 ,
+                       topics: { 
                         Bootstrap: 4,
                         Material: 3,
                         SASS: 2,
-                        SCSS: 4,
-                        default: 4                 
+                        SCSS: 4
+                      },
+                                    
                         
                     },
 
                     HTML: {
-                        HTML5: 4,
-                        JSX: 4,
-                        TSX: 4,
-                        WebComponents: 4,
-                        default: 5
+                        rating: 5,
+                        topics: {
+                            HTML5: 4,
+                            JSX: 4,
+                            TSX: 4,
+                            WebComponents: 4
+                        }
                     }
                 },
 
@@ -113,6 +123,17 @@ class Configuration {
                        
                     }
                 ]
+            },
+            contact: {
+                facebook: {
+                    
+                    href: 'abc.xyz',
+                    icon:'',
+                },
+                linkedin: {
+                    href: 'abc.xyz',
+                    icon:'',
+                }
             }
         }
     }

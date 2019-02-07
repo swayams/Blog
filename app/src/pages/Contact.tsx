@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+
 export interface IContactsProps {
     value: string
 }
@@ -15,7 +16,7 @@ class Contacts extends React.Component<IContactsProps, IContactsState> {
     }
     public render() { 
         return ( 
-        <div>
+        <div className={classes.root}>
             Contact Page
 
         </div> 
@@ -24,3 +25,7 @@ class Contacts extends React.Component<IContactsProps, IContactsState> {
 }
  
 export default Contacts;
+
+const classes = {
+    root: 'contact'
+}
