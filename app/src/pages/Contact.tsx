@@ -18,6 +18,7 @@ class Contacts extends React.Component<IContactsProps, IContactsState> {
         return ( 
         <div className={classes.root}>
             Contact Page
+            
 
         </div> 
         );

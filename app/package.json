@@ -5,9 +5,11 @@
   "homepage": "https://swayams.github.io",
   "dependencies": {
     "@petejkim/react-scripts-ts-sass": "2.15.2",
-    "mongodb-stitch-browser-sdk": "^4.1.1",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "firebase": "^5.8.3",
+    "immutable": "^4.0.0-rc.12",
+    "mongodb-stitch-browser-sdk": "^4.3.0",
+    "react": "^16.8.2",
+    "react-dom": "^16.8.2",
     "react-router-dom": "^4.3.1"
   },
   "scripts": {
@@ -15,15 +17,16 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "deploy": "npm run build --production && firebase deploy --project blogsite-5a2de"
+    "deploy": "npm run build --production && firebase deploy --project blogsite-5a2de",
+    "firestoreImport": "firestore-import --accountCredentials ./database/blogsite-5a2de-firebase-adminsdk-vglz2-5c2a588c0a.json --backupFile ./database/backups/bk1.json"
   },
   "devDependencies": {
-    "@types/jest": "^23.3.5",
-    "@types/node": "^10.12.0",
-    "@types/react": "^16.4.17",
-    "@types/react-dom": "^16.0.9",
+    "@types/jest": "^24.0.6",
+    "@types/node": "^11.9.4",
+    "@types/react": "^16.8.3",
+    "@types/react-dom": "^16.8.2",
     "@types/react-router-dom": "^4.3.1",
     "gh-pages": "^2.0.1",
-    "typescript": "^3.1.3"
+    "typescript": "^3.3.3"
   }
 }

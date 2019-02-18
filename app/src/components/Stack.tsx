@@ -17,8 +17,9 @@ const classes = {
         {
             default: 'rating',
             empty: 'empty',
-            subject:'rating topics',
-            overall: 'rating default'
+            overall: 'rating default',
+            subject:'rating topics'
+           
             
         },  
 

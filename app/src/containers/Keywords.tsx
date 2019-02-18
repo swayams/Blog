@@ -1,30 +1,29 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Link, Route  } from 'react-router-dom';
+import { getNode } from 'src/services/db';
 import Stack from '../components/Stack';
 
-export interface IKeywordsProps {
-    keywords: any[]
-}
- 
+
 export interface IKeywordsState {
+    keywords: []
     current: string;
 }
 
-const classes ={
-    item: 'keyword',
-
-    root: 'keywords'
-    
-} 
- 
-class Keywords extends React.Component<IKeywordsProps, IKeywordsState> {
-    constructor(props: IKeywordsProps) {
+class Keywords extends React.Component<{}, IKeywordsState> {
+    constructor(props: {}) {
         super(props);
-        this.state = { current: '' };
+        this.state = { current: '', keywords: [] };
+    }
+
+    public componentWillMount() {
+        getNode('pages/about/skills').then((data) => {
+            const content = data.val()
+            this.setState({keywords: content})
+        })
     }
     public render() { 
 
-        const keys = Object.keys(this.props.keywords)
+        const keys = Object.keys(this.state.keywords)
 
         return ( 
             <Router >
@@ -47,3 +46,10 @@ class Keywords extends React.Component<IKeywordsProps, IKeywordsState> {
 }
  
 export default Keywords;
+
+const classes ={
+    item: 'keyword',
+
+    root: 'keywords'
+    
+} 

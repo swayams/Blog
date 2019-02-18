@@ -1,20 +1,41 @@
 import * as React from 'react';
+
+
 import Experience from '../components/Experience';
 import Image from '../components/Image';
 import TextBlock from '../components/TextBlock';
 import face from '../config/assets/brand-img.jpg';
 import Config from '../config/configuration';
 import Keywords from '../containers/Keywords';
+import { getNode } from '../services/db';
+
+
+
  
 const classes = {
     root: 'about'
 }
-class About extends React.Component {
-    private config: any;
-    constructor(props : {}) {
 
-        super(props);
-       this.config = new Config();
+
+
+
+class About extends React.Component<{}, {}> {
+    private config: any;
+   
+    constructor(props : {}) {
+        super(props);  
+         
+        this.config = new Config();
+    }
+
+    public componentDidMount() {
+        getNode('/pages/portfolio').then(
+            (data) => {
+                // tslint:disable-next-line:no-console
+                const  content  = data.val()
+                this.setState({skills: content.skills})
+            }
+        )
     }
     public render() { 
         return ( 
@@ -23,11 +44,11 @@ class About extends React.Component {
                    width={this.config.page.about.image.width} 
                    altText={this.config.page.about.image.alt} />
                            
-                 <TextBlock content={this.config.page.about.content} />
+                 <TextBlock />
 
-                 <Experience experiences={this.config.page.about.experience} />
+                 <Experience  />
 
-                 <Keywords keywords = {this.config.page.about.keyword} />
+                 <Keywords />
             </div>
          );
     }

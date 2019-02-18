@@ -16,10 +16,14 @@
             display: block;
             line-height: 3em;
             text-decoration: none;
+            text-transform: uppercase;
+            color: $header-secondary-color;
             &:hover {
                 background-color: $header-secondary-color;
                 color: #fff !important;
             }
+
+
                         
         }
     }

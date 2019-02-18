@@ -1,10 +1,14 @@
 import * as React from 'react';
+import { Suspense } from 'react';
+import { getNode } from '../services/db';
 
-export interface IExperienceProps {
-    experiences: any []
-}
+import { List } from 'immutable';
+
+
+
  
 export interface IExperienceState {
+    experiences: List<any>
     current: any
 }
 
@@ -16,17 +20,26 @@ const classes ={
     
 }
  
-class Experience extends React.Component<IExperienceProps, IExperienceState> {
-    constructor(props: IExperienceProps) {
-        super(props);
-        this.state = { current:  '' };
+class Experience extends React.Component<{}, IExperienceState> {
+    constructor({}) {
+        super({});
+        this.state = { current:  '', experiences: List([]) };
     }
+
+    public componentWillMount() {
+        getNode('pages/about/experience').then((data) => {
+            const content = data.val()
+            this.setState({experiences: List(content)})
+        })
+    }
+  
     public render() { 
         return ( 
-            <div className={classes.root} >
+            <Suspense fallback={<h2>Product list is loading...</h2>}>
+                <div className={classes.root} >
                 <h1>Experience</h1>
                 {
-                    this.props.experiences.map( (exp, index) => 
+                    this.state.experiences.map( (exp, index) => 
                         {
                            return (
                              <div key={index} className={classes.item}>
@@ -40,6 +53,8 @@ class Experience extends React.Component<IExperienceProps, IExperienceState> {
                     )
                 }
             </div>
+            </Suspense>
+            
          );
     }
 }

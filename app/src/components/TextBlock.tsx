@@ -1,26 +1,37 @@
 import * as React from 'react';
-
- // import path from '../../config/assets/brand-img.jpg';
+import { Suspense } from 'react';
+import { getNode } from 'src/services/db';
 
 const classes = {
     root: 'text-block'
 }
 
-interface ITextBlockProps {
+interface ITextBlockState {
     content: string;
 }
 
 
-class TextBlock extends React.Component<ITextBlockProps> {
-
-    constructor(props: ITextBlockProps) {
-        super(props,{});
+class TextBlock extends React.Component<{}, ITextBlockState> {
+   
+    constructor({}) {
+        super({});
+        
+        this.state = {
+            content: ''
+        }
 
 
     }
+
+    public componentWillMount() {
+        getNode('pages/about/about').then((data) => {
+            const content = data.val()
+            this.setState({content})
+        })
+    }
     public render() { 
         return (  
-       <p className={classes.root}>{this.props.content}</p>
+       <Suspense fallback={<div> Suspense</div>}><p className={classes.root}>{this.state.content}</p></Suspense>
         
     );
     }

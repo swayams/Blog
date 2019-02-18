@@ -1,0 +1,15 @@
+.auth {
+    @extend %widthMax;
+    
+
+    .msg {
+       text-align: right;
+
+       .btn {
+           margin: 3px;
+       }
+    }
+
+
+
+}

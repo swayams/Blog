@@ -1,4 +1,5 @@
 import * as React from 'react';
+import Projects from '../containers/Projects';
 
 export interface IPortfolioProps {
     projects: string
@@ -20,7 +21,7 @@ class Portfolio extends React.Component<IPortfolioProps, IPortfolioState> {
     public render() { 
         return ( 
             <div className={classes.root}>
-                Test Portfolio
+                <Projects />
                 
             </div>
          );
